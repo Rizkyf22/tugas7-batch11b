@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profil Saya</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="asset/css/styleVALUEJS.css">
+    </head>
+    <body>
+        <nav>
+            <div class="menu-mobile">
+                <a href="#" onclick="showMenu()">menu</a>
+            </div>
+            <ul id="menu">
+                <li><a href="Home.html">HOME</a></li>
+                <li><a href="Index.html">PROFILE</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">INVENTORY</a></li>
+            </ul>
+        </nav>
+
+        <section id="box-profile">
+            <div class="img-profile">
+                <div class="photo">
+                    <img id="img1" src="asset/image/profile.jpg">
+                </div>
+            </div>
+            
+            <div class="description">
+                <h1 id="pName">Rizky Fajar Setiawan</h1>
+                <p id="pRole">Front End Designer</p>
+                <a href="#input-form" class="button bg-blue" onclick="editForm()">Edit</a>
+                <a href="#" class="button border-green">Resume</a>
+            </div>
+        
+            <div class="information">
+                <div class="data">
+                    <p class="field">Availability</p>
+                    <p id="pAvailable" class="text-gray">Full Time</p>
+                </div>
+                <div class="data">
+                    <p class="field">Usia</p>
+                    <p id="pAge" class="text-gray">26</p>
+                </div>
+                <div class="data">
+                    <p class="field">Lokasi</p>
+                    <p id="pLocation" class="text-gray">Bandung</p>
+                </div>
+                <div class="data">
+                    <p class="field">Pengalaman</p>
+                    <p id="pExperience" class="text-gray">2</p>
+                </div>
+                <div class="data">
+                    <p class="field">Email</p>
+                    <p id="pEmail" class="text-gray">rizkyfsetiawan7@gmail.com</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="input-form">
+            <form method="" action="" name="datapribadi">
+                <div class="form">
+                    <label>Nama</label>
+                    <input id="inpName" type="text" name="nama" placeholder="masukkan nama anda">
+                </div>   
+                <div class="form">
+                    <label>Role</label>
+                    <input id="inpRole" type="text" name="role" >
+                </div>  
+                <div class="form">
+                    <label>Availability</label>
+                    <input id="inpAvailability" type="text" name="Availability" >
+                </div>  
+                <div class="form">
+                    <label>Usia</label>
+                    <input id="inpUsia" type="number" name="usia" >
+                </div>  
+                <div class="form">
+                    <label>Lokasi</label>
+                    <input id="inpLokasi" type="text" name="lokasi" >
+                </div>  
+                <div class="form">
+                    <label>Years Experience</label>
+                    <input id="inpYears" type="number" name="experience" >
+                </div>  
+                <div class="form">
+                    <label>Email</label>
+                    <input id="inpEmail" type="email" name="email" >
+                </div>            
+                <div class="form">
+                    <input onclick="simpanForm()" type="submit" name="submit" value="SUBMIT" class="bg-green">
+                </div>
+            </form>            
+        </section>
+
+        <script>
+            var formMenu = document.getElementById("input-form");
+            formMenu.style.display="none";
+            
+            function editForm(){
+                if(formMenu.style.display === "none"){
+                    formMenu.style.display = "block";
+                }else{
+                    formMenu.style.display = "none";
+                }
+
+                var name = document.getElementById("pName").innerHTML;
+                var role = document.getElementById("pRole").innerHTML;
+                var available = document.getElementById("pAvailable").innerHTML;
+                var usia = document.getElementById("pAge").innerHTML;
+                var lokasi = document.getElementById("pLocation").innerHTML;
+                var experience= document.getElementById("pExperience").innerHTML;
+                var email = document.getElementById("pEmail").innerHTML;
+
+                document.getElementById("inpName");
+                document.getElementById("inpRole");
+                document.getElementById("inpAvailability");
+                document.getElementById("inpUsia");
+                document.getElementById("inpLokasi");
+                document.getElementById("inpYears");
+                document.getElementById("inpEmail");
+
+            }
+            
+            function simpanForm(){
+                
+            }
+
+            function showMenu()
+            {
+                var menu = document.getElementById("menu");
+                var box = document.getElementById("box-profile");
+
+                if(menu.style.display === "block"){
+                    menu.style.display = "none";
+                    box.style.paddingTop = "0px";
+                }else{
+                    menu.style.display = "block";
+                    box.style.paddingTop = "125px";
+                }
+            }
+        </script>
+    </body>
+</html>
